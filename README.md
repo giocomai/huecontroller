@@ -90,7 +90,7 @@ or colder:
 
 ``` r
 hue_set_light_temperature(id = "Living Room 1",
-                          temperature = "+",
+                          temperature = "-",
                           by = 10)
 ```
 
