@@ -17,3 +17,4 @@ hue_get_lights_names <- function() {
                  purrr::pluck,
                  "name")
 }
+

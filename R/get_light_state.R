@@ -19,6 +19,6 @@ hue_get_light_state <- function(id) {
                            as = "parsed",
                            encoding = "UTF8")
 
-  return(light_l)
+  light_l
 
 }

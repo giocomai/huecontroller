@@ -7,6 +7,7 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
 <!-- badges: end -->
 
 `huecontroller` allows to easily control Philips Hue lights from R.
@@ -16,7 +17,9 @@ turning lights on or off and changing brightness or light temperature.
 
 It is functional and can be used to adjust lights at home.
 
-It does not yet have a Shiny app, but it probably will.
+It has a shiny app that allows for controlling light and temperature of
+lights, `hue_shiny_controller()` (you need to use `hue_settings()` with
+your settings first).
 
 It can already be used for making video data visualisations, but sooner
 or later it will probably have a dedicated vignette and some more
