@@ -21,9 +21,11 @@ It has a shiny app that allows for controlling light and temperature of
 lights, `hue_shiny_controller()` (you need to use `hue_settings()` with
 your settings first).
 
-It can already be used for making video data visualisations, but sooner
-or later it will probably have a dedicated vignette and some more
-functions to make this easier.
+<img src="man/figures/README-shiny_screenshot.png">
+
+`huecontroller` can already be used for making video data
+visualisations, but sooner or later it will probably have a dedicated
+vignette and some more functions to make this easier.
 
 ## Installation
 
