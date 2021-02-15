@@ -7,8 +7,10 @@
 #'
 #' @examples
 hue_turn_on <- function(id) {
-  invisible(hue_set_state(id = id,
-                   params = list(on = TRUE)))
+  invisible(hue_set_state(
+    id = id,
+    params = list(on = TRUE)
+  ))
 }
 
 
@@ -21,6 +23,8 @@ hue_turn_on <- function(id) {
 #'
 #' @examples
 hue_turn_off <- function(id) {
-  invisible(hue_set_state(id = id,
-                             params = list(on = FALSE)))
+  invisible(hue_set_state(
+    id = id,
+    params = list(on = FALSE)
+  ))
 }

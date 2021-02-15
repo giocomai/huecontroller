@@ -6,17 +6,23 @@
 #'
 #' @examples
 hue_get_groups_names <- function() {
-  group_request <- httr::GET(paste0("http://",
-                                    hue_settings()$hue_ip, "/api/",
-                                    hue_settings()$hue_username, "/groups"))
-  
-  groups_l <- httr::content(x = group_request,
-                            as = "parsed",
-                            encoding = "UTF8")
-  
-  purrr::map_chr(groups_l,
-                 purrr::pluck,
-                 "name")
+  group_request <- httr::GET(paste0(
+    "http://",
+    hue_settings()$hue_ip, "/api/",
+    hue_settings()$hue_username, "/groups"
+  ))
+
+  groups_l <- httr::content(
+    x = group_request,
+    as = "parsed",
+    encoding = "UTF8"
+  )
+
+  purrr::map_chr(
+    groups_l,
+    purrr::pluck,
+    "name"
+  )
 }
 
 #' Get state of given group
@@ -29,14 +35,18 @@ hue_get_groups_names <- function() {
 #'
 #' @examples
 hue_get_group_state <- function(id) {
-  group_request <- httr::GET(paste0("http://",
-                                    hue_settings()$hue_ip, "/api/",
-                                    hue_settings()$hue_username, "/groups/", hue_output_group_id(id)))
-  
-  groups_l <- httr::content(x = group_request,
-                            as = "parsed",
-                            encoding = "UTF8")
-  
+  group_request <- httr::GET(paste0(
+    "http://",
+    hue_settings()$hue_ip, "/api/",
+    hue_settings()$hue_username, "/groups/", hue_output_group_id(id)
+  ))
+
+  groups_l <- httr::content(
+    x = group_request,
+    as = "parsed",
+    encoding = "UTF8"
+  )
+
   groups_l
 }
 
@@ -50,7 +60,7 @@ hue_get_group_state <- function(id) {
 #'
 #' @examples
 hue_get_group_lights <- function(id) {
-  hue_get_group_state(id) %>% 
+  hue_get_group_state(id) %>%
     purrr::pluck("lights") %>%
     as.integer()
 }

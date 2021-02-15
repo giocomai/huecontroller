@@ -12,14 +12,20 @@ hue_set_light_brightness <- function(id,
                                      brightness,
                                      by = 10) {
   if (is.numeric(brightness)) {
-    hue_set_state(id = id,
-                     params = list(bri = brightness))
-  } else if (brightness=="brighter"|brightness=="+") {
-    hue_set_state(id = id,
-                     params = list(bri_inc = by))
-  } else if (brightness=="darker"|brightness=="-") {
-    hue_set_state(id = id,
-                     params = list(bri_inc = -by))
+    hue_set_state(
+      id = id,
+      params = list(bri = brightness)
+    )
+  } else if (brightness == "brighter" | brightness == "+") {
+    hue_set_state(
+      id = id,
+      params = list(bri_inc = by)
+    )
+  } else if (brightness == "darker" | brightness == "-") {
+    hue_set_state(
+      id = id,
+      params = list(bri_inc = -by)
+    )
   } else {
     usethis::ui_stop(x = 'Brightness must either be a numeric value, or one of either "brighter" (or "+") or "darker" (or "-")')
   }

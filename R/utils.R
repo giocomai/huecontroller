@@ -7,11 +7,11 @@
 #'
 #' @examples
 hue_output_id <- function(id) {
-  if (is.numeric(id)==TRUE) {
+  if (is.numeric(id) == TRUE) {
     return(id)
   } else {
-    id_number <- which(hue_get_lights_names()==id)
-    if (length(id_number)==0) {
+    id_number <- which(hue_get_lights_names() == id)
+    if (length(id_number) == 0) {
       usethis::ui_stop("id must either be an integer or the exact name of an existing light.")
     } else {
       return(as.numeric(names(id_number)))
@@ -29,11 +29,11 @@ hue_output_id <- function(id) {
 #'
 #' @examples
 hue_output_group_id <- function(id) {
-  if (is.numeric(id)==TRUE) {
+  if (is.numeric(id) == TRUE) {
     return(id)
   } else {
-    id_number <- which(hue_get_groups_names()==id)
-    if (length(id_number)==0) {
+    id_number <- which(hue_get_groups_names() == id)
+    if (length(id_number) == 0) {
       usethis::ui_stop("id must either be an integer or the exact name of an existing group.")
     } else {
       return(as.numeric(names(id_number)))

@@ -12,14 +12,20 @@ hue_set_light_temperature <- function(id,
                                       temperature,
                                       by = 10) {
   if (is.numeric(temperature)) {
-    hue_set_state(id = id,
-                     params = list(ct = temperature))
-  } else if (temperature=="warmer"|temperature=="+") {
-    hue_set_state(id = id,
-                     params = list(ct_inc = by))
-  } else if (temperature=="colder"|temperature=="-") {
-    hue_set_state(id = id,
-                     params = list(ct_inc = -by))
+    hue_set_state(
+      id = id,
+      params = list(ct = temperature)
+    )
+  } else if (temperature == "warmer" | temperature == "+") {
+    hue_set_state(
+      id = id,
+      params = list(ct_inc = by)
+    )
+  } else if (temperature == "colder" | temperature == "-") {
+    hue_set_state(
+      id = id,
+      params = list(ct_inc = -by)
+    )
   } else {
     usethis::ui_stop(x = 'Temperature must either be a numeric value, or one of either "warmer" (or "+") or "colder" (or "-")')
   }

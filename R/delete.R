@@ -9,18 +9,22 @@
 hue_delete_light <- function(id) {
   check <- usethis::ui_yeah(x = paste0("Do you really want to delete the light ", id, "?"))
   if (check == TRUE) {
-    response <- httr::DELETE(url = paste0("http://",
-                                          hue_settings()$hue_ip,
-                                          "/api/",
-                                          hue_settings()$hue_username,
-                                          "/lights/",
-                                          hue_output_id(id),
-                                          "/state"),
-                             body = body_json)
-    
+    response <- httr::DELETE(
+      url = paste0(
+        "http://",
+        hue_settings()$hue_ip,
+        "/api/",
+        hue_settings()$hue_username,
+        "/lights/",
+        hue_output_id(id),
+        "/state"
+      ),
+      body = body_json
+    )
+
     invisible(response)
   } else {
-    usethis::ui_info("Operation cancelled")  
+    usethis::ui_info("Operation cancelled")
   }
 }
 
@@ -35,14 +39,16 @@ hue_delete_light <- function(id) {
 hue_delete_group <- function(id) {
   check <- usethis::ui_yeah(x = paste0("Do you really want to delete the group ", id, "?"))
   if (check == TRUE) {
-  response <- httr::DELETE(url = paste0("http://",
-                                        hue_settings()$hue_ip,
-                                        "/api/",
-                                        hue_settings()$hue_username,
-                                        "/groups/",
-                                        hue_output_group_id(id)))
-  invisible(response)
+    response <- httr::DELETE(url = paste0(
+      "http://",
+      hue_settings()$hue_ip,
+      "/api/",
+      hue_settings()$hue_username,
+      "/groups/",
+      hue_output_group_id(id)
+    ))
+    invisible(response)
   } else {
-    usethis::ui_info("Operation cancelled")  
+    usethis::ui_info("Operation cancelled")
   }
 }
