@@ -23,3 +23,4 @@ hue_set_state <- function(id,
 
   invisible(response)
 }
+
