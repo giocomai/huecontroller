@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -37,12 +39,6 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -64,11 +60,13 @@
 <a href="#huecontroller" class="anchor"></a>huecontroller</h1></div>
 <!-- badges: start -->
 
+<!-- badges: end -->
 <p><code>huecontroller</code> allows to easily control Philips Hue lights from R.</p>
 <p>It has intuitive commands that make it easy to make common tasks such as turning lights on or off and changing brightness or light temperature.</p>
 <p>It is functional and can be used to adjust lights at home.</p>
-<p>It does not yet have a Shiny app, but it probably will.</p>
-<p>It can already be used for making video data visualisations, but sooner or later it will probably have a dedicated vignette and some more functions to make this easier.</p>
+<p>It has a shiny app that allows for controlling light and temperature of lights, <code><a href="reference/hue_shiny_controller.html">hue_shiny_controller()</a></code> (you need to use <code><a href="reference/hue_settings.html">hue_settings()</a></code> with your settings first).</p>
+<p><img src="reference/figures/README-shiny_screenshot.png"></p>
+<p><code>huecontroller</code> can already be used for making video data visualisations, but sooner or later it will probably have a dedicated vignette and some more functions to make this easier.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -148,6 +146,8 @@
 <li><small><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></small></li>
 </ul>
 </div>
+
+
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
@@ -155,13 +155,14 @@
 </ul>
 </div>
 
-  <div class="dev-status">
+<div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
@@ -170,7 +171,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
@@ -178,6 +179,8 @@
 
   
 
+
+  
 
   </body>
 </html>
