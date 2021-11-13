@@ -7,23 +7,28 @@
 #' @export
 #'
 #' @examples
-hue_mod_light_card_ui <- function(id, light) {
+hue_mod_light_card_ui <- function(id,
+                                  light,
+                                  onoff,
+                                  brightness,
+                                  temperature,
+                                  min_temperature,
+                                  max_temperature) {
   ns <- shiny::NS(id)
-  current_light <- hue_get_light_state(id = light)
   shiny::tagList(
     shiny::fluidRow(
-      style = "border: 2px solid #375a7f;padding:10px;margin:10px;border-radius:25px;",
+      style = "border: 2px solid #375a7f;padding:10px;margin:10px;border-radius:25px;width:100%;",
 
-      shiny::h4(current_light$name),
+      shiny::h4(light),
       shinyjs::hidden(shiny::textInput(
         inputId = shiny::NS(id, "light"),
         label = "Current light",
-        value = current_light$name
+        value = light
       )),
       shinyWidgets::switchInput(
         inputId = shiny::NS(id, "onoff"),
         label = "",
-        value = current_light$state$on,
+        value = onoff,
         width = "100%"
       ),
       shiny::sliderInput(
@@ -31,14 +36,16 @@ hue_mod_light_card_ui <- function(id, light) {
         label = "Brightness",
         min = 0,
         max = 254,
-        value = current_light$state$bri
+        value = brightness,
+        width = "100%"
       ),
       shiny::sliderInput(
         inputId = shiny::NS(id, "temperature"),
         label = "Temperature",
-        min = current_light$capabilities$control$ct$min,
-        max = current_light$capabilities$control$ct$max,
-        value = current_light$state$ct
+        min = min_temperature,
+        max = max_temperature,
+        value = temperature,
+        width = "100%"
       )
     )
   )

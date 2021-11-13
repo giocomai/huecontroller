@@ -4,7 +4,15 @@
 \alias{hue_mod_light_card_ui}
 \title{UI function for shiny app}
 \usage{
-hue_mod_light_card_ui(id, light)
+hue_mod_light_card_ui(
+  id,
+  light,
+  onoff,
+  brightness,
+  temperature,
+  min_temperature,
+  max_temperature
+)
 }
 \arguments{
 \item{id}{Module id}
