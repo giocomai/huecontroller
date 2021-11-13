@@ -132,3 +132,9 @@ hue_set_state(id = 11, # not `id = "11"`
                             bri = 250, 
                             hue = 2000))
 ```
+
+## Control all your lights from a browser with Shiny
+
+``` r
+hue_shiny_controller()
+```
