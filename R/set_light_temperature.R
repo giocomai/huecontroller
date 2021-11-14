@@ -12,17 +12,17 @@ hue_set_light_temperature <- function(id,
                                       temperature,
                                       by = 10) {
   if (is.numeric(temperature)) {
-    hue_set_state(
+    hue_set_light_state(
       id = id,
       params = list(ct = temperature)
     )
   } else if (temperature == "warmer" | temperature == "+") {
-    hue_set_state(
+    hue_set_light_state(
       id = id,
       params = list(ct_inc = by)
     )
   } else if (temperature == "colder" | temperature == "-") {
-    hue_set_state(
+    hue_set_light_state(
       id = id,
       params = list(ct_inc = -by)
     )

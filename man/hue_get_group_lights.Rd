@@ -7,7 +7,7 @@
 hue_get_group_lights(id)
 }
 \arguments{
-\item{id}{If numeric, numeric id of group. If charachter, name of group. You can check id and names with \code{hue_get_groups_names()}}
+\item{id}{If numeric, numeric id of group. If character, name of group. You can check id and names with \code{hue_get_groups_names()}}
 }
 \value{
 An integer vector with id of lights included in a group.

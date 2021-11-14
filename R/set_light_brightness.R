@@ -12,17 +12,17 @@ hue_set_light_brightness <- function(id,
                                      brightness,
                                      by = 10) {
   if (is.numeric(brightness)) {
-    hue_set_state(
+    hue_set_light_state(
       id = id,
       params = list(bri = brightness)
     )
   } else if (brightness == "brighter" | brightness == "+") {
-    hue_set_state(
+    hue_set_light_state(
       id = id,
       params = list(bri_inc = by)
     )
   } else if (brightness == "darker" | brightness == "-") {
-    hue_set_state(
+    hue_set_light_state(
       id = id,
       params = list(bri_inc = -by)
     )

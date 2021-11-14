@@ -111,26 +111,26 @@ hue_get_light_status(id = "Living Room 1")
 Details on the exact format of the lights API are [available on the
 official website](https://developers.meethue.com/develop/hue-api/).
 
-You can set any of them giving them as a list to `hue_set_state()`,
-e.g. like this:
+You can set any of them giving them as a list to
+`hue_set_light_state()`, e.g. like this:
 
 ``` r
-hue_set_state(id = "Living Room 1",
-              params = list(on = TRUE,
-                            sat = 250, 
-                            bri = 250, 
-                            hue = 2000))
+hue_set_light_state(id = "Living Room 1",
+                    params = list(on = TRUE,
+                                  sat = 250, 
+                                  bri = 250, 
+                                  hue = 2000))
 ```
 
 Keep in mind that if you want to identify lights by their numeric id,
 you should pass the argument as a numeric, not a character, e.g.
 
 ``` r
-hue_set_state(id = 11, # not `id = "11"`
-              params = list(on = TRUE,
-                            sat = 250, 
-                            bri = 250, 
-                            hue = 2000))
+hue_set_light_state(id = 11, # not `id = "11"`
+                    params = list(on = TRUE,
+                                  sat = 250, 
+                                  bri = 250, 
+                                  hue = 2000))
 ```
 
 ## Control all your lights from a browser with Shiny

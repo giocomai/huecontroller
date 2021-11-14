@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-hue_set_state <- function(id,
+hue_set_light_state <- function(id,
                           params) {
   body_json <- jsonlite::toJSON(
     x = params,
