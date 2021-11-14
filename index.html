@@ -138,11 +138,20 @@
                                   sat <span class="op">=</span> <span class="fl">250</span>, 
                                   bri <span class="op">=</span> <span class="fl">250</span>, 
                                   hue <span class="op">=</span> <span class="fl">2000</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p>You can achieve the same with groups:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/hue_get_groups_names.html">hue_get_groups_names</a></span><span class="op">(</span><span class="op">)</span>
+
+<span class="fu"><a href="reference/hue_set_group_state.html">hue_set_group_state</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span>, <span class="co"># not `id = "1"`</span>
+                    params <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>on <span class="op">=</span> <span class="cn">TRUE</span>,
+                                  sat <span class="op">=</span> <span class="fl">250</span>, 
+                                  bri <span class="op">=</span> <span class="fl">250</span>, 
+                                  hue <span class="op">=</span> <span class="fl">2000</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="control-all-your-lights-from-a-browser-with-shiny" class="section level2">
 <h2 class="hasAnchor">
 <a href="#control-all-your-lights-from-a-browser-with-shiny" class="anchor"></a>Control all your lights from a browser with Shiny</h2>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/hue_shiny_controller.html">hue_shiny_controller</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
