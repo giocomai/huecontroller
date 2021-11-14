@@ -133,6 +133,18 @@ hue_set_light_state(id = 11, # not `id = "11"`
                                   hue = 2000))
 ```
 
+You can achieve the same with groups:
+
+``` r
+hue_get_groups_names()
+
+hue_set_group_state(id = 1, # not `id = "1"`
+                    params = list(on = TRUE,
+                                  sat = 250, 
+                                  bri = 250, 
+                                  hue = 2000))
+```
+
 ## Control all your lights from a browser with Shiny
 
 ``` r
