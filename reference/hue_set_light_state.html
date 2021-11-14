@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get light status — hue_get_light_state • huecontroller</title>
+<title>Change state of Hue lights — hue_set_light_state • huecontroller</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Get light status — hue_get_light_state" />
-<meta property="og:description" content="Get light status" />
+<meta property="og:title" content="Change state of Hue lights — hue_set_light_state" />
+<meta property="og:description" content="Change state of Hue lights" />
 
 
 
@@ -103,16 +103,16 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get light status</h1>
+    <h1>Change state of Hue lights</h1>
     
-    <div class="hidden name"><code>hue_get_light_state.Rd</code></div>
+    <div class="hidden name"><code>hue_set_light_state.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get light status</p>
+    <p>Change state of Hue lights</p>
     </div>
 
-    <pre class="usage"><span class='fu'>hue_get_light_state</span><span class='op'>(</span><span class='va'>id</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>hue_set_light_state</span><span class='op'>(</span><span class='va'>id</span>, <span class='va'>params</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -120,6 +120,10 @@
     <tr>
       <th>id</th>
       <td><p>If numeric, numeric id of light. If charachter, name of light. You can check id and names with <code><a href='hue_get_lights_names.html'>hue_get_lights_names()</a></code></p></td>
+    </tr>
+    <tr>
+      <th>params</th>
+      <td><p>A named list. For a full list of available parameters, check https://developers.meethue.com/develop/hue-api/lights-api/</p></td>
     </tr>
     </table>
 

@@ -16,6 +16,9 @@
     <loc>https://giocomai.github.io/huecontroller/reference/hue_get_group_state.html</loc>
   </url>
   <url>
+    <loc>https://giocomai.github.io/huecontroller/reference/hue_get_groups.html</loc>
+  </url>
+  <url>
     <loc>https://giocomai.github.io/huecontroller/reference/hue_get_groups_names.html</loc>
   </url>
   <url>
@@ -43,10 +46,10 @@
     <loc>https://giocomai.github.io/huecontroller/reference/hue_set_light_brightness.html</loc>
   </url>
   <url>
-    <loc>https://giocomai.github.io/huecontroller/reference/hue_set_light_temperature.html</loc>
+    <loc>https://giocomai.github.io/huecontroller/reference/hue_set_light_state.html</loc>
   </url>
   <url>
-    <loc>https://giocomai.github.io/huecontroller/reference/hue_set_state.html</loc>
+    <loc>https://giocomai.github.io/huecontroller/reference/hue_set_light_temperature.html</loc>
   </url>
   <url>
     <loc>https://giocomai.github.io/huecontroller/reference/hue_settings.html</loc>
