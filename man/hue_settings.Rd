@@ -7,7 +7,7 @@
 hue_settings(ip = NULL, username = NULL)
 }
 \arguments{
-\item{ip}{A charachter vector of length one. The IP of your hue bridge, e.g. "192.168.0.1"}
+\item{ip}{A character vector of length one. The IP of your hue bridge, e.g. "192.168.0.1"}
 
 \item{username}{A username generated to interact with the API. For details, https://developers.meethue.com/develop/get-started-2/}
 }

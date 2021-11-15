@@ -1,6 +1,6 @@
 #' Check if given id is valid
 #'
-#' @param id If numeric, numeric id of light. If charachter, name of light. You can check id and names with `hue_get_lights_names()`
+#' @param id If numeric, numeric id of light. If character, name of light. You can check id and names with `hue_get_lights_names()`
 #'
 #' @return Always return an integer corresponding to a given light.
 #' @export
@@ -22,7 +22,7 @@ hue_output_id <- function(id) {
 
 #' Check if given id is valid
 #'
-#' @param id If numeric, numeric id of light. If charachter, name of light. You can check id and names with `hue_get_lights_names()`
+#' @param id If numeric, numeric id of light. If character, name of light. You can check id and names with `hue_get_lights_names()`
 #'
 #' @return Always return an integer corresponding to a given light.
 #' @export

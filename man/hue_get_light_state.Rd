@@ -2,16 +2,16 @@
 % Please edit documentation in R/get_light_state.R
 \name{hue_get_light_state}
 \alias{hue_get_light_state}
-\title{Get light status}
+\title{Get light state}
 \usage{
 hue_get_light_state(id)
 }
 \arguments{
-\item{id}{If numeric, numeric id of light. If charachter, name of light. You can check id and names with \code{hue_get_lights_names()}}
+\item{id}{If numeric, numeric id of light. If character, name of light. You can check id and names with \code{hue_get_lights_names()}}
 }
 \value{
 
 }
 \description{
-Get light status
+Get light state
 }

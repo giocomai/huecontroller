@@ -1,6 +1,6 @@
 #' Change state of Hue lights
 #'
-#' @param id If numeric, numeric id of light. If charachter, name of light. You can check id and names with `hue_get_lights_names()`
+#' @param id If numeric, numeric id of light. If character, name of light. You can check id and names with `hue_get_lights_names()`
 #' @param params A named list. For a full list of available parameters, check https://developers.meethue.com/develop/hue-api/lights-api/
 #'
 #' @return
@@ -33,7 +33,7 @@ hue_set_light_state <- function(id,
 
 #' Change state of Hue groups
 #'
-#' @param id If numeric, numeric id of group. If charachter, name of group. You can check id and names with `hue_get_groups_names()`
+#' @param id If numeric, numeric id of group. If character, name of group. You can check id and names with `hue_get_groups_names()`
 #' @param params A named list. For a full list of available parameters, check https://developers.meethue.com/develop/hue-api/groupds-api/
 #'
 #' @return

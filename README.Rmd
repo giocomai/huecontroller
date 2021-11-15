@@ -107,13 +107,22 @@ hue_set_light_temperature(id = "Living Room 1",
                           by = 10)
 ```
 
+
+or change colour completely:
+
+```{r}
+hue_set_light_colour(id = "Living Room 1",
+                     colour = "red")
+```
+
+
 Get and set anything available in the API for specific lights
 -------------------------------------------------------------
 
 The following command will output a list object with all available details shared by the APIs.
 
 ```{r}
-hue_get_light_status(id = "Living Room 1")
+hue_get_light_state(id = "Living Room 1")
 ```
 
 Details on the exact format of the lights API are [available on the official website](https://developers.meethue.com/develop/hue-api/).

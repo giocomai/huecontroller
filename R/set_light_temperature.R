@@ -1,6 +1,6 @@
 #' Set temperature of light
 #'
-#' @param id If numeric, numeric id of light. If charachter, name of light. You can check id and names with `hue_get_lights_names()`
+#' @param id If numeric, numeric id of light. If character, name of light. You can check id and names with `hue_get_lights_names()`
 #' @param temperature A numeric value, or one of either "warmer" (or "+") or "colder" (or "-"). The warmest value available is usually 500, the coldest 153.
 #' @param by Numeric, defaults to 10. Ignored if temperature is numeric. Otherwise determines the size of the increment/decrement.
 #'

@@ -7,7 +7,7 @@
 hue_set_light_brightness(id, brightness, by = 10)
 }
 \arguments{
-\item{id}{If numeric, numeric id of light. If charachter, name of light. You can check id and names with \code{hue_get_lights_names()}}
+\item{id}{If numeric, numeric id of light. If character, name of light. You can check id and names with \code{hue_get_lights_names()}}
 
 \item{brightness}{A numeric value, or one of either "brighter" (or "+") or "darker" (or "-"). The highest value is 254, the lowest 1.}
 

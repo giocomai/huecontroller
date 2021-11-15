@@ -1,6 +1,6 @@
-#' Get light status
+#' Get light state
 #'
-#' @param id If numeric, numeric id of light. If charachter, name of light. You can check id and names with `hue_get_lights_names()`
+#' @param id If numeric, numeric id of light. If character, name of light. You can check id and names with `hue_get_lights_names()`
 #'
 #' @return
 #' @export
