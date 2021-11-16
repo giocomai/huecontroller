@@ -13,7 +13,27 @@ hue_shiny_controller <- function() {
       bootswatch = "darkly"
     ),
     shiny::fluidRow(
-      shiny::actionButton(inputId = "update_button", label = "Update")
+      shiny::actionButton(inputId = "update_button", 
+                          label = "Update",
+                          icon = shiny::icon(name = "sync"),
+                          style = "margin-left:10px;margin-right:10px;"), 
+      
+      # shiny::actionButton(inputId = "lights_or_groups_input", 
+      #                     label = "Lights or groups?",
+      #                     style = "margin-left:10px;margin-right:10px;",
+      #                     icon = shiny::icon(name = "lightbulb")),
+      
+      
+      # shinyWidgets::radioGroupButtons(
+      #   inputId = "light_group_selector",
+      #   label = "Control lights or groups?",
+      #   choices = c("Lights", 
+      #               "Groups"),
+      #   selected = "Lights"
+      # ),
+      
+      
+      style = "border: 2px solid #375a7f;padding:10px;margin:10px;border-radius:25px;width:100%;"
     ),
     
     
