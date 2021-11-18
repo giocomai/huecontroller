@@ -72,8 +72,8 @@ In all `huecontroller` functions you will be able to refer to light indifferentl
 Turn on and off.
 
 ```{r}
-hue_turn_on("Living Room 1")
-hue_turn_off("Living Room 1")
+hue_turn_light_on("Living Room 1")
+hue_turn_light_off("Living Room 1")
 ```
 
 Make light a bit brighter.

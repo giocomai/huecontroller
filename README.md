@@ -64,8 +64,8 @@ indifferently using either their numeric id or their *exact* name.
 Turn on and off.
 
 ``` r
-hue_turn_on("Living Room 1")
-hue_turn_off("Living Room 1")
+hue_turn_light_on("Living Room 1")
+hue_turn_light_off("Living Room 1")
 ```
 
 Make light a bit brighter.
