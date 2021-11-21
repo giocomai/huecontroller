@@ -1,10 +1,12 @@
 #' Interactive interface to control lights
 #'
+#' options Options to be passed to the shiny app. See `?shiny::shinyApp()` for details.
+#'
 #' @return
 #' @export
 #'
 #' @examples
-hue_shiny_controller <- function() {
+hue_shiny_controller <- function(options = list()) {
   ui <- shiny::fluidPage(
     title = "huecontroller",
     shinyjs::useShinyjs(),
@@ -93,5 +95,7 @@ hue_shiny_controller <- function() {
   
   
 
-  shiny::shinyApp(ui, server)
+  shiny::shinyApp(ui = ui,
+                  server = server,
+                  options = options)
 }

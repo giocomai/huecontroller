@@ -4,11 +4,11 @@
 \alias{hue_shiny_controller}
 \title{Interactive interface to control lights}
 \usage{
-hue_shiny_controller()
+hue_shiny_controller(options = list())
 }
 \value{
 
 }
 \description{
-Interactive interface to control lights
+options Options to be passed to the shiny app. See \code{?shiny::shinyApp()} for details.
 }
