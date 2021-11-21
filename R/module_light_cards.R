@@ -26,9 +26,8 @@ hue_mod_light_card_ui <- function(id,
                         label = "",
                         value = onoff,
                         inline = FALSE,
-                        handleWidth = 80,
-                        labelWidth = 40,
-                        width = "200px"
+                        handleWidth = 60,
+                        labelWidth = 40
                       )),
       shiny::sliderInput(
         inputId = shiny::NS(id, "brightness"),
