@@ -20,16 +20,23 @@ hue_mod_group_card_ui <- function(id,
       style = "border: 2px solid #375a7f;padding:10px;margin:10px;border-radius:25px;width:100%;",
 
       shiny::h4(group),
-      shinyjs::hidden(shiny::textInput(
-        inputId = shiny::NS(id, "group"),
-        label = "Current group",
-        value = group
-      )),
+      shiny::fluidRow(style = "width:100%;margin-left:0px;",
+                      shinyWidgets::switchInput(
+                        inputId = shiny::NS(id, "onoff"),
+                        label = "",
+                        value = onoff,
+                        inline = FALSE,
+                        handleWidth = 80,
+                        labelWidth = 40,
+                        width = "200px"
+                      )),
       shinyWidgets::switchInput(
         inputId = shiny::NS(id, "onoff"),
         label = "",
         value = onoff,
-        width = "100%"
+        handleWidth = 80,
+        labelWidth = 40,
+        width = "120px"
       ),
       shiny::sliderInput(
         inputId = shiny::NS(id, "brightness"),
@@ -46,7 +53,12 @@ hue_mod_group_card_ui <- function(id,
         max = max_temperature,
         value = temperature,
         width = "100%"
-      )
+      ),
+      shinyjs::hidden(shiny::textInput(
+        inputId = shiny::NS(id, "group"),
+        label = "Current group",
+        value = group
+      ))
     )
   )
 }

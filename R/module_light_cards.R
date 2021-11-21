@@ -18,19 +18,18 @@ hue_mod_light_card_ui <- function(id,
   shiny::tagList(
     shiny::fluidRow(
       style = "border: 2px solid #375a7f;padding:10px;margin:10px;border-radius:25px;width:100%;",
-
+      
       shiny::h4(light),
-      shinyjs::hidden(shiny::textInput(
-        inputId = shiny::NS(id, "light"),
-        label = "Current light",
-        value = light
-      )),
-      shinyWidgets::switchInput(
-        inputId = shiny::NS(id, "onoff"),
-        label = "",
-        value = onoff,
-        width = "100%"
-      ),
+      shiny::fluidRow(style = "width:100%;margin-left:0px;",
+                      shinyWidgets::switchInput(
+                        inputId = shiny::NS(id, "onoff"),
+                        label = "",
+                        value = onoff,
+                        inline = FALSE,
+                        handleWidth = 80,
+                        labelWidth = 40,
+                        width = "200px"
+                      )),
       shiny::sliderInput(
         inputId = shiny::NS(id, "brightness"),
         label = "Brightness",
@@ -46,7 +45,12 @@ hue_mod_light_card_ui <- function(id,
         max = max_temperature,
         value = temperature,
         width = "100%"
-      )
+      ),
+      shinyjs::hidden(shiny::textInput(
+        inputId = shiny::NS(id, "light"),
+        label = "Current light",
+        value = light
+      ))
     )
   )
 }
