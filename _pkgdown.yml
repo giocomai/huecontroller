@@ -1,2 +1,4 @@
-url: https://giocomai.github.io/huecontroller
+url: https://giocomai.github.io/huecontroller/
+template:
+  bootstrap: 5
 
