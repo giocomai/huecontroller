@@ -1,6 +1,6 @@
 Package: huecontroller
 Title: Control Philips Hue lights using the R programming language
-Version: 0.0.0.9003
+Version: 0.0.0.9004
 Authors@R: 
     person(given = "Giorgio",
            family = "Comai",
