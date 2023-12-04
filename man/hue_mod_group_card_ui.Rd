@@ -19,9 +19,6 @@ hue_mod_group_card_ui(
 
 \item{group}{Group id}
 }
-\value{
-
-}
 \description{
 UI function for shiny app
 }

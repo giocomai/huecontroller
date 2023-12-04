@@ -6,9 +6,6 @@
 \usage{
 hue_shiny_controller(options = list())
 }
-\value{
-
-}
 \description{
 options Options to be passed to the shiny app. See \code{?shiny::shinyApp()} for details.
 }

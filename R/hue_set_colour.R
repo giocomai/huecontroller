@@ -1,20 +1,22 @@
-#' Convert hex colour to 
+#' Convert hex colour to
 #'
 #' @param colour A colour name as listed by `colours()` or a hexadecimal colour string.
 #'
-#' @return A named list with two elements: `hue` and `sat` 
+#' @return A named list with two elements: `hue` and `sat`
 #' @export
 #'
 #' @examples
-#' 
+#'
 #' hue_convert_to_hue_sat("red")
 #' hue_convert_to_hue_sat("#E414FF")
 #' if (interactive()) {
-#' hue_convert_to_hue_sat(colourpicker::colourPicker(numCols = 1))
+#'   hue_convert_to_hue_sat(colourpicker::colourPicker(numCols = 1))
 #' }
 hue_convert_to_hue_sat <- function(colour) {
-  list(hue = round(rgb2hsv(col2rgb(colour))[1]*65535),
-       sat = round(rgb2hsv(col2rgb(colour))[2]*255))
+  list(
+    hue = round(rgb2hsv(col2rgb(colour))[1] * 65535),
+    sat = round(rgb2hsv(col2rgb(colour))[2] * 255)
+  )
 }
 
 
@@ -31,18 +33,19 @@ hue_convert_to_hue_sat <- function(colour) {
 #' @export
 #'
 #' @examples
-#' 
+#'
 #' if (interactive()) {
-#' hue_set_light_colour(id = 11, colour = "blue")
+#'   hue_set_light_colour(id = 11, colour = "blue")
 #' }
-#' 
-hue_set_light_colour <- function(id, 
-                                 colour, 
+#'
+hue_set_light_colour <- function(id,
+                                 colour,
                                  transition_time = 0.4) {
   hue_set_light_state(
     id = id,
     params = c(hue_convert_to_hue_sat(colour),
-               transitiontime = transition_time*10)
+      transitiontime = transition_time * 10
+    )
   )
 }
 
@@ -59,16 +62,17 @@ hue_set_light_colour <- function(id,
 #' @export
 #'
 #' @examples
-#' 
+#'
 #' if (interactive()) {
-#' hue_set_group_colour(id = 11, colour = "green")
+#'   hue_set_group_colour(id = 11, colour = "green")
 #' }
-hue_set_group_colour <- function(id, 
+hue_set_group_colour <- function(id,
                                  colour,
                                  transition_time = 0.4) {
   hue_set_group_state(
     id = id,
     params = c(hue_convert_to_hue_sat(colour),
-               transitiontime = transition_time*10) 
+      transitiontime = transition_time * 10
+    )
   )
 }

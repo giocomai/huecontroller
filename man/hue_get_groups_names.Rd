@@ -6,9 +6,6 @@
 \usage{
 hue_get_groups_names()
 }
-\value{
-
-}
 \description{
 Get names of available groups
 }

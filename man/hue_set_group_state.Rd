@@ -11,9 +11,6 @@ hue_set_group_state(id, params)
 
 \item{params}{A named list. For a full list of available parameters, check https://developers.meethue.com/develop/hue-api/groupds-api/}
 }
-\value{
-
-}
 \description{
 Change state of Hue groups
 }

@@ -77,12 +77,12 @@ hue_get_groups <- function() {
     hue_settings()$hue_ip, "/api/",
     hue_settings()$hue_username, "/groups/"
   ))
-  
+
   groups_l <- httr::content(
     x = group_request,
     as = "parsed",
     encoding = "UTF8"
   )
-  
+
   groups_l
 }

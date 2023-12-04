@@ -10,12 +10,12 @@ hue_get_lights <- function() {
     hue_settings()$hue_ip, "/api/",
     hue_settings()$hue_username, "/lights"
   ))
-  
+
   lights_l <- httr::content(
     x = lights_request,
     as = "parsed",
     encoding = "UTF8"
   )
-  
+
   lights_l
 }

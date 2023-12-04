@@ -8,7 +8,7 @@
 #'
 #' @examples
 hue_set_light_state <- function(id,
-                          params) {
+                                params) {
   body_json <- jsonlite::toJSON(
     x = params,
     auto_unbox = TRUE
@@ -46,7 +46,7 @@ hue_set_group_state <- function(id,
     x = params,
     auto_unbox = TRUE
   )
-  
+
   response <- httr::PUT(
     url = paste0(
       "http://",
@@ -59,6 +59,6 @@ hue_set_group_state <- function(id,
     ),
     body = body_json
   )
-  
+
   invisible(response)
 }

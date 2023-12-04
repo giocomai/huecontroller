@@ -11,9 +11,6 @@ hue_settings(ip = NULL, username = NULL)
 
 \item{username}{A username generated to interact with the API. For details, https://developers.meethue.com/develop/get-started-2/}
 }
-\value{
-
-}
 \description{
 Set IP and username to interact with the api
 }

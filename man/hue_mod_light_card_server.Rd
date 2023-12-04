@@ -9,9 +9,6 @@ hue_mod_light_card_server(id)
 \arguments{
 \item{id}{Module id}
 }
-\value{
-
-}
 \description{
 Server function for shiny app
 }

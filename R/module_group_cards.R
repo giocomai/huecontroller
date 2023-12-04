@@ -18,17 +18,18 @@ hue_mod_group_card_ui <- function(id,
   shiny::tagList(
     shiny::fluidRow(
       style = "border: 2px solid #375a7f;padding:10px;margin:10px;border-radius:25px;width:100%;",
-
       shiny::h4(group),
-      shiny::fluidRow(style = "width:100%;margin-left:0px;",
-                      shinyWidgets::switchInput(
-                        inputId = shiny::NS(id, "onoff"),
-                        label = "",
-                        value = onoff,
-                        inline = FALSE,
-                        handleWidth = 60,
-                        labelWidth = 40
-                      )),
+      shiny::fluidRow(
+        style = "width:100%;margin-left:0px;",
+        shinyWidgets::switchInput(
+          inputId = shiny::NS(id, "onoff"),
+          label = "",
+          value = onoff,
+          inline = FALSE,
+          handleWidth = 60,
+          labelWidth = 40
+        )
+      ),
       shinyWidgets::switchInput(
         inputId = shiny::NS(id, "onoff"),
         label = "",

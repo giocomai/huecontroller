@@ -6,9 +6,6 @@
 \usage{
 hue_get_lights_names()
 }
-\value{
-
-}
 \description{
 Get names of all available lights
 }

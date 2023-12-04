@@ -9,7 +9,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%", 
+  out.width = "100%",
   eval = FALSE
 )
 ```
@@ -56,9 +56,10 @@ At the beginning of each session, set up parameters: actual ip of your bridge, a
 library("huecontroller")
 
 
-hue_settings(ip = "192.168.0.111",
-             username = "actual_username_from_API")
-
+hue_settings(
+  ip = "192.168.0.111",
+  username = "actual_username_from_API"
+)
 ```
 
 With the following command, you will see all the names of your lights.
@@ -79,40 +80,50 @@ hue_turn_light_off("Living Room 1")
 Make light a bit brighter.
 
 ```{r}
-hue_set_light_brightness(id = "Living Room 1",
-                         brightness = "+",
-                         by = 10)
+hue_set_light_brightness(
+  id = "Living Room 1",
+  brightness = "+",
+  by = 10
+)
 ```
 
 Set it to arbitrary birghtness (max = 254)
 
 ```{r}
-hue_set_light_brightness(id = "Living Room 1",
-                         brightness = 254)
+hue_set_light_brightness(
+  id = "Living Room 1",
+  brightness = 254
+)
 ```
 
 Make it warmer:
 
 ```{r}
-hue_set_light_temperature(id = "Living Room 1",
-                          temperature = "+",
-                          by = 10)
+hue_set_light_temperature(
+  id = "Living Room 1",
+  temperature = "+",
+  by = 10
+)
 ```
 
 or colder:
 
 ```{r}
-hue_set_light_temperature(id = "Living Room 1",
-                          temperature = "-",
-                          by = 10)
+hue_set_light_temperature(
+  id = "Living Room 1",
+  temperature = "-",
+  by = 10
+)
 ```
 
 
 or change colour completely:
 
 ```{r}
-hue_set_light_colour(id = "Living Room 1",
-                     colour = "red")
+hue_set_light_colour(
+  id = "Living Room 1",
+  colour = "red"
+)
 ```
 
 
@@ -130,21 +141,29 @@ Details on the exact format of the lights API are [available on the official web
 You can set any of them giving them as a list to `hue_set_light_state()`, e.g. like this:
 
 ```{r}
-hue_set_light_state(id = "Living Room 1",
-                    params = list(on = TRUE,
-                                  sat = 250, 
-                                  bri = 250, 
-                                  hue = 2000))
+hue_set_light_state(
+  id = "Living Room 1",
+  params = list(
+    on = TRUE,
+    sat = 250,
+    bri = 250,
+    hue = 2000
+  )
+)
 ```
 
 Keep in mind that if you want to identify lights by their numeric id, you should pass the argument as a numeric, not a character, e.g.
 
 ```{r}
-hue_set_light_state(id = 11, # not `id = "11"`
-                    params = list(on = TRUE,
-                                  sat = 250, 
-                                  bri = 250, 
-                                  hue = 2000))
+hue_set_light_state(
+  id = 11, # not `id = "11"`
+  params = list(
+    on = TRUE,
+    sat = 250,
+    bri = 250,
+    hue = 2000
+  )
+)
 ```
 
 
@@ -154,11 +173,15 @@ You can achieve the same with groups:
 ```{r}
 hue_get_groups_names()
 
-hue_set_group_state(id = 1, # not `id = "1"`
-                    params = list(on = TRUE,
-                                  sat = 250, 
-                                  bri = 250, 
-                                  hue = 2000))
+hue_set_group_state(
+  id = 1, # not `id = "1"`
+  params = list(
+    on = TRUE,
+    sat = 250,
+    bri = 250,
+    hue = 2000
+  )
+)
 ```
 
 

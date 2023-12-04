@@ -19,9 +19,6 @@ hue_mod_light_card_ui(
 
 \item{light}{Light id}
 }
-\value{
-
-}
 \description{
 UI function for shiny app
 }

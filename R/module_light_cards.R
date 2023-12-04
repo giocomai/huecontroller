@@ -15,26 +15,27 @@ hue_mod_light_card_ui <- function(id,
                                   min_temperature,
                                   max_temperature) {
   ns <- shiny::NS(id)
-  
+
   if (is.null(temperature)) {
     temperature <- 0
     min_temperature <- 0
     max_temperature <- 0
-  } 
+  }
   shiny::tagList(
     shiny::fluidRow(
       style = "border: 2px solid #375a7f;padding:10px;margin:10px;border-radius:25px;width:100%;",
-      
       shiny::h4(light),
-      shiny::fluidRow(style = "width:100%;margin-left:0px;",
-                      shinyWidgets::switchInput(
-                        inputId = shiny::NS(id, "onoff"),
-                        label = "",
-                        value = onoff,
-                        inline = FALSE,
-                        handleWidth = 60,
-                        labelWidth = 40
-                      )),
+      shiny::fluidRow(
+        style = "width:100%;margin-left:0px;",
+        shinyWidgets::switchInput(
+          inputId = shiny::NS(id, "onoff"),
+          label = "",
+          value = onoff,
+          inline = FALSE,
+          handleWidth = 60,
+          labelWidth = 40
+        )
+      ),
       shiny::sliderInput(
         inputId = shiny::NS(id, "brightness"),
         label = "Brightness",

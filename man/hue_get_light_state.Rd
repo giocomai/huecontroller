@@ -9,9 +9,6 @@ hue_get_light_state(id)
 \arguments{
 \item{id}{If numeric, numeric id of light. If character, name of light. You can check id and names with \code{hue_get_lights_names()}}
 }
-\value{
-
-}
 \description{
 Get light state
 }

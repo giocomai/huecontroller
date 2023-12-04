@@ -13,15 +13,12 @@ hue_set_group_colour(id, colour, transition_time = 0.4)
 
 \item{transition_time}{Duration of the transition in seconds. Defaults to 0.4 seconds.}
 }
-\value{
-
-}
 \description{
 N.B. Colour accuracy may not be perfect. See the official documentation for details, and consider using custom parameters with \code{hue_set_group_state()} if this function does not achieve what you expect. https://developers.meethue.com/develop/application-design-guidance/color-conversion-formulas-rgb-to-xy-and-back/
 }
 \examples{
 
 if (interactive()) {
-hue_set_group_colour(id = 11, colour = "green")
+  hue_set_group_colour(id = 11, colour = "green")
 }
 }

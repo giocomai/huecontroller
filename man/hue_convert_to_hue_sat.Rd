@@ -20,6 +20,6 @@ Convert hex colour to
 hue_convert_to_hue_sat("red")
 hue_convert_to_hue_sat("#E414FF")
 if (interactive()) {
-hue_convert_to_hue_sat(colourpicker::colourPicker(numCols = 1))
+  hue_convert_to_hue_sat(colourpicker::colourPicker(numCols = 1))
 }
 }
