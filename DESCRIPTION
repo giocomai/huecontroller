@@ -1,6 +1,6 @@
 Package: huecontroller
 Title: Control Philips Hue lights using the R programming language
-Version: 0.0.0.9005
+Version: 0.0.0.9006
 Authors@R: 
     person(given = "Giorgio",
            family = "Comai",
@@ -12,7 +12,7 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.3
 Imports: 
     usethis,
     magrittr,
@@ -21,5 +21,8 @@ Imports:
     jsonlite,
     shinyWidgets,
     shinyjs,
-    shiny
+    shiny,
+    bslib,
+    grDevices,
+    colourpicker
 URL: https://giocomai.github.io/huecontroller

@@ -27,7 +27,6 @@ hue_shiny_controller <- function(options = list()) {
       #                     style = "margin-left:10px;margin-right:10px;",
       #                     icon = shiny::icon(name = "lightbulb")),
 
-
       # shinyWidgets::radioGroupButtons(
       #   inputId = "light_group_selector",
       #   label = "Control lights or groups?",
@@ -51,8 +50,7 @@ hue_shiny_controller <- function(options = list()) {
             purrr::map2(
               .x = group_names_v,
               .y = as.numeric(names(group_names_v)),
-              .f = function(current_group,
-                            current_group_id) {
+              .f = function(current_group, current_group_id) {
                 shiny::column(
                   width = 3,
                   shiny::h2(current_group),
@@ -79,9 +77,9 @@ hue_shiny_controller <- function(options = list()) {
               fluidRow()
           )
         })
-      }, ignoreNULL = FALSE
+      },
+      ignoreNULL = FALSE
     )
-
 
     purrr::walk(
       .x = hue_get_lights_names(),
@@ -90,8 +88,6 @@ hue_shiny_controller <- function(options = list()) {
       }
     )
   }
-
-
 
   shiny::shinyApp(
     ui = ui,
